@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} Heart {% endblock title %}
+
+{%block body%}
+
+<div class="container my-5">
+    <div class="card text-dark bg-light mb-3">
+        <div class="card-header">Heart Attack Prediction</div>
+        <div class="card-body">
+            {% if ans == 1 %}
+                <h5 style="color: red;">You are in Denger.</h5>
+                <h5 style="color: red;">You have a high chance of Heart Attack.</h5>
+            {% else %}
+                <h5>You are out of Denger.</h5>
+                <h5>You have a Low chance of Heart Attack.</h5>
+            {% endif %}
+        </div>
+    </div>
+
+    <a href="/" type="button" class="btn btn-outline-dark">Home</a>
+</div>
+
+{%endblock body%}

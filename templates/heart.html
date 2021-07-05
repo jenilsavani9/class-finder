@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block title %} Heart {% endblock title %}
+
+{%block body%}
+
+<div class="container my-5" style="width: 60rem;">
+    <h1>Heart Attack Prediction</h1>
+</div>
+
+<form action="/heart/pred" method="POST" class="container my-5" style="width: 60rem;">
+    <div class="mb-3">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" class="form-control" id="age" name="age" required placeholder="Enter Your Age">
+    </div>
+    <div class="mb-3">
+        <label for="sex" class="form-label">Sex</label>
+        <select id="sex" class="form-select" name="sex" required>
+            <option selected disabled>Choose...</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="exang" class="form-label">Exercise Induced Angina</label>
+        <select id="exang" class="form-select" name="exang" required>
+            <option selected disabled>Choose...</option>
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="ca" class="form-label">Number of Major Vessels</label>
+        <select id="ca" class="form-select" name="ca" required>
+            <option selected disabled>Choose...</option>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="cp" class="form-label">Chest Pain</label>
+        <select id="cp" class="form-select" name="cp" required>
+            <option selected disabled>Choose...</option>
+            <option>Typical Angina </option>
+            <option>Atypical Angina</option>
+            <option>Non-anginal Pain</option>
+            <option>Asymptomatic</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="trtbps" class="form-label">Resting Blood Pressure</label>
+        <input type="text" class="form-control" id="trtbps" name="trtbps" placeholder="Enter a value between 94 to 200"
+            required>
+    </div>
+    <div class="mb-3">
+        <label for="chol" class="form-label">Cholestoral</label>
+        <input type="number" class="form-control" id="chol" name="chol" placeholder="cholestoral in mg/dl" required>
+    </div>
+    <div class="mb-3">
+        <label for="fbs" class="form-label">Fasting Blood Sugar</label>
+        <input type="number" class="form-control" id="fbs" name="fbs" placeholder="Enter a value" required>
+    </div>
+    <div class="mb-3">
+        <label for="rest_ecg" class="form-label">Resting Electrocardiographic Results</label>
+        <select id="rest_ecg" class="form-select" name="rest_ecg" required>
+            <option selected disabled>Choose...</option>
+            <option>Normal</option>
+            <option>hypertrophy</option>
+            <option>having ST-T wave abnormality</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="thalach" class="form-label">Maximum Heart Rate</label>
+        <input type="number" class="form-control" id="thalach" name="thalach"
+            placeholder="Enter value between 70 to 200" required>
+    </div>
+    <div class="mb-3">
+        <label for="oldpeak" class="form-label">Maximum Heart Rate</label>
+        <input type="text" class="form-control" id="oldpeak" name="oldpeak" placeholder="Enter value between 0 to 6"
+            required>
+    </div>
+    <div class="mb-3">
+        <label for="slp" class="form-label">Slope of the peak exercise ST segment</label>
+        <select id="slp" class="form-select" name="slp" required>
+            <option selected disabled>Choose...</option>
+            <option>Upsloping</option>
+            <option>Flat</option>
+            <option>Downsloping</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
+</form>
+
+{%endblock body%}
