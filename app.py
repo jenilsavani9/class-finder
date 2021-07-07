@@ -71,6 +71,29 @@ def heart_pred():
             return render_template('error.html')
     else:
         return render_template('error.html')
+
+@app.route('/bank', methods=['GET', 'POST'])
+def bank():
+    return render_template('bank.html')
+
+@app.route('/bank/pred', methods=['GET', 'POST'])
+def bank_pred():
+    if request.method == 'POST':
+        try:
+            length = float(request.form.get('length'))
+            left = float(request.form.get('left'))
+            right = float(request.form.get('right'))
+            bottom = float(request.form.get('bottom'))
+            top = float(request.form.get('top'))
+            diagonal = float(request.form.get('diagonal'))
+            col = [length, left, right, bottom, top, diagonal]
+            model = pickle.load(open('pkl/note.pkl', 'rb'))
+            prediction = model.predict([col])    
+            return render_template('bank_pred.html', ans=prediction)
+        except:
+            return render_template('error.html')
+    else:
+        return render_template('error.html')
         
 if __name__ == "__main__":
     app.run(debug=True)

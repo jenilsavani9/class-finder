@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %} Banknote {% endblock title %}
+
+{%block body%}
+
+<div class="container my-5" style="width: 60rem;">
+    <h1>Banknote Conterfeit Detection</h1>
+</div>
+
+<form action="/bank/pred" method="POST" class="container my-5" style="width: 60rem;">
+    <div class="mb-3">
+        <label for="length" class="form-label">Length</label>
+        <input type="text" class="form-control" id="length" name="length" required placeholder="Length of bill (mm)">
+    </div>
+    <div class="mb-3">
+        <label for="left" class="form-label">Left</label>
+        <input type="text" class="form-control" id="left" name="left" required placeholder="Width of left edge (mm)">
+    </div>
+    <div class="mb-3">
+        <label for="right" class="form-label">Right</label>
+        <input type="text" class="form-control" id="right" name="right" required placeholder="Width of right edge (mm)">
+    </div>
+    <div class="mb-3">
+        <label for="bottom" class="form-label">Bottom</label>
+        <input type="text" class="form-control" id="bottom" name="bottom" required placeholder="Bottom margin width (mm)">
+    </div>
+    <div class="mb-3">
+        <label for="top" class="form-label">Top</label>
+        <input type="text" class="form-control" id="top" name="top" required placeholder="Top margin width (mm)">
+    </div>
+    <div class="mb-3">
+        <label for="diagonal" class="form-label">Diagonal</label>
+        <input type="text" class="form-control" id="diagonal" name="diagonal" required placeholder="Length of diagonal (mm)">
+    </div>
+
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
+</form>
+
+{%endblock body%}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %} Banknote {% endblock title %}
+
+{%block body%}
+
+<div class="container my-5">
+    <div class="card text-dark bg-light mb-3">
+        <div class="card-header">Banknote Conterfeit Detection</div>
+        <div class="card-body">
+            {% if ans == 1 %}
+                <h5>This is a conterfeit Banknote</h5>
+            {% else %}
+                <h5>This is a genuine banknotes</h5>
+            {% endif %}
+        </div>
+    </div>
+
+    <a href="/" type="button" class="btn btn-outline-dark">Home</a>
+</div>
+
+{%endblock body%}
