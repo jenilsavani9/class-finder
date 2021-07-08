@@ -94,6 +94,29 @@ def bank_pred():
             return render_template('error.html')
     else:
         return render_template('error.html')
+
+@app.route('/diabetes', methods=['POST', 'GET'])
+def diabetes():
+   return render_template('diabetes.html')
+
+@app.route('/diabetes/pred', methods=['POST', 'GET'])
+def diabetes_pred():
+    if request.method == 'POST':
+        Glucose = int(request.form.get('Glucose'))
+        BloodPressure = int(request.form.get('BloodPressure'))
+        SkinThickness = int(request.form.get('SkinThickness'))
+        Pregnancies = int(request.form.get('Pregnancies'))
+        Insulin = int(request.form.get('Insulin'))
+        BMI = float(request.form.get('BMI'))
+        DiabetesPedigreeFunction = float(request.form.get('DiabetesPedigreeFunction'))
+        Age = int(request.form.get('Age'))
+        col = [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]
+        model = pickle.load(open('pkl/diabetes.pkl', 'rb'))
+        pred = model.predict([col])
+        print(pred)
+        return render_template('diabetes_pred.html', ans=pred)
+    else:
+        return render_template('error.html')
         
 if __name__ == "__main__":
     app.run(debug=True)

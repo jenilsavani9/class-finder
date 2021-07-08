@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %} Diabetes {% endblock title %}
+
+{%block body%}
+
+<div class="container my-5" style="width: 60rem;">
+    <h1>Diabetes Prediction</h1>
+</div>
+
+<form action="/diabetes/pred" method="POST" class="container my-5" style="width: 60rem;">
+    <div class="mb-3">
+        <label for="Glucose" class="form-label">Glucose</label>
+        <input type="number" class="form-control" id="Glucose" name="Glucose" required placeholder="Glucose Level ">
+    </div>
+    <div class="mb-3">
+        <label for="BloodPressure" class="form-label">BloodPressure</label>
+        <input type="number" class="form-control" id="BloodPressure" name="BloodPressure" required placeholder="Diastolic blood pressure (mm Hg)">
+    </div>
+    <div class="mb-3">
+        <label for="SkinThickness" class="form-label">SkinThickness</label>
+        <input type="number" class="form-control" id="SkinThickness" name="SkinThickness" required placeholder="Triceps skin fold thickness (mm)">
+    </div>
+    <div class="mb-3">
+        <label for="Pregnancies" class="form-label">Pregnancies</label>
+        <input type="number" class="form-control" id="Pregnancies" name="Pregnancies" required placeholder="Number of times pregnant">
+    </div>
+    <div class="mb-3">
+        <label for="Insulin" class="form-label">Insulin</label>
+        <input type="number" class="form-control" id="Insulin" name="Insulin" required placeholder="2-Hour serum insulin (mu U/ml)">
+    </div>
+    <div class="mb-3">
+        <label for="BMI" class="form-label">BMI</label>
+        <input type="text" class="form-control" id="BMI" name="BMI" required placeholder="Body mass index (weight in kg/(height in m)^2)">
+    </div>
+    <div class="mb-3">
+        <label for="DiabetesPedigreeFunction" class="form-label">DiabetesPedigreeFunction</label>
+        <input type="text" class="form-control" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" required placeholder="Diabetes pedigree function">
+    </div>
+    <div class="mb-3">
+        <label for="Age" class="form-label">Age</label>
+        <input type="number" class="form-control" id="Age" name="Age" required placeholder="Age (years)">
+    </div>
+
+    <button type="submit" class="btn btn-outline-dark">Submit</button>
+</form>
+
+{%endblock body%}
