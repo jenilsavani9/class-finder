@@ -4,7 +4,7 @@ class finder project is a simple classification project. In this project i take 
 
 ## DEMO
 
-![app ui](https://github.com/jenilsavani9/value-predictor/blob/main/static/images/class_ui.png)
+![app ui](https://github.com/jenilsavani9/class-finder/blob/main/static/images/class_ui.png)
 
 ## Datasets
 
