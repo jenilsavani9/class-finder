@@ -1,6 +1,6 @@
 # class-finder
 
-class finder project is a simple classification project. In this project i take three problem statemet heart attack prediction,Banknote Conterfeit Detection, diabetes prediction.
+class finder project is a simple classification project. In this project i take three problem statemet heart attack prediction,Banknote Counterfeit Detection, diabetes prediction.
 
 ## DEMO
 
