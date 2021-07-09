@@ -10,7 +10,7 @@ class finder project is a simple classification project. In this project i take 
 
 heart attack prediction : https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset
 
-Banknote Conterfeit prediction : https://www.kaggle.com/chrizzles/swiss-banknote-conterfeit-detection
+Banknote Counterfeit prediction : https://www.kaggle.com/chrizzles/swiss-banknote-conterfeit-detection
 
 diabetes prediction prediction : https://www.kaggle.com/mathchi/diabetes-data-set
 
